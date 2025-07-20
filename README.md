@@ -23,7 +23,6 @@ A **production-ready Node.js backend boilerplate** built with **JavaScript** and
 - JavaScript (ES6+)
 - Dotenv
 - ESLint + Prettier
-- Docker (optional)
 
 ---
 
@@ -34,3 +33,4 @@ A **production-ready Node.js backend boilerplate** built with **JavaScript** and
 ```bash
 git clone https://github.com/sajukarim76/backend-boilerplate.git
 cd backend-boilerplate
+```
