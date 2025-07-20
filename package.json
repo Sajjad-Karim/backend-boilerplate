@@ -1,0 +1,22 @@
+{
+  "name": "backend-boilerplate",
+  "version": "1.0.0",
+  "description": "Production-ready Node.js backend boilerplate with Express, javascript, and best practices.",
+  "keywords": [
+    "\"nodejs\"",
+    "\"backend\"",
+    "\"boilerplate\"",
+    "\"express\"",
+    "\"typescript\"",
+    "\"javascript\"",
+    "\"production\"",
+    "\"starter\""
+  ],
+  "license": "ISC",
+  "author": "Sajjad Karim <sajukarim76@gmail.com>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
