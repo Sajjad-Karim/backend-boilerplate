@@ -3,19 +3,33 @@ const mongoose = require('mongoose')
 const { DB_NAME } = require('../../constants')
 
 const uri = process.env.MONGO_DB_URI
+
+// Define optional Mongoose configurations
 const configs = {
-  strictQuery: true
+  strictQuery: true // Enables strict filtering (only query fields defined in schema are allowed)
 }
 
+// Async function to connect to MongoDB
 const connect = async () => {
   try {
+    // Connect to the MongoDB instance using the URI and DB name
     const connectionInstance = await mongoose.connect(`${uri}/${DB_NAME}`)
-    for (const [key, value] of Object.entries(configs)) mongoose.set(key, value)
-    console.log(`MONGODB connected !! DB HOST : ${connectionInstance.connection.host}`)
+
+    // Apply additional configurations to Mongoose after connection
+    for (const [key, value] of Object.entries(configs)) {
+      mongoose.set(key, value)
+    }
+    console.log(`✅ MONGODB connected !! DB HOST: ${connectionInstance.connection.host}`)
   } catch (err) {
-    console.log('MONGODB connection FAILED ', err)
-    process.getMaxListeners(1)
+    console.log('❌ MONGODB connection FAILED', err)
+
+    // Exit process with failure (instead of unrelated process.getMaxListeners)
+    process.exit(1)
   }
 }
+
+// Immediately call the connect function when file loads
 connect()
+
+// Export the Mongoose instance for use elsewhere in the app
 module.exports = mongoose
