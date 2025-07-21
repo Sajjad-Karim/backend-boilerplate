@@ -1,2 +1,3 @@
-const DB_NAME = 'backend-boilerpalte'
-module.exports = DB_NAME
+module.exports = {
+  DB_NAME: 'my_database_name'
+}
