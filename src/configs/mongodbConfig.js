@@ -9,7 +9,6 @@ const configs = {
   strictQuery: true // Enables strict filtering (only query fields defined in schema are allowed)
 }
 
-// Async function to connect to MongoDB
 const connect = async () => {
   try {
     // Connect to the MongoDB instance using the URI and DB name
