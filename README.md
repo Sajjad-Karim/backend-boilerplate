@@ -28,6 +28,12 @@ A **production-ready Node.js backend boilerplate** built with **JavaScript** and
 
 ---
 
+## 🖼️ File Uploads with Multer + Cloudinary
+
+This project uses multer to handle file uploads and cloudinary to store them in the cloud.
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. 📥 Clone the Repository
@@ -50,6 +56,9 @@ npm install
 cp .env.example .env
 ```
 
-## 🖼️ File Uploads with Multer + Cloudinary
+### 4. ▶️ Start the Server
 
-This project uses multer to handle file uploads and cloudinary to store them in the cloud.
+```bash
+npm run dev
+
+```
