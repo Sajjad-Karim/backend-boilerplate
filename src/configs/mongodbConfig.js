@@ -1,6 +1,6 @@
-require('dotenv').config()
+require('dotenv').config({ quiet: true })
 const mongoose = require('mongoose')
-const { DB_NAME } = require('../../constants')
+const { DB_NAME } = require('../constants')
 
 const uri = process.env.MONGO_DB_URI
 

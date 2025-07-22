@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config({ quiet: true })
 const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
@@ -8,7 +8,7 @@ const createHttpError = require('http-errors')
 const app = express()
 
 // Database configuration
-require('./src/configs/mongodbConfig')
+require('../src/configs/mongodbConfig')
 
 // CORS configuration: allows all origins (adjust for production)
 const corsOptions = {
