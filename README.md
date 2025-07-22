@@ -6,13 +6,13 @@ A **production-ready Node.js backend boilerplate** built with **JavaScript** and
 
 ## 🔥 Features
 
-- ⚙️ **Express.js** setup with modular routing
-- 🛡️ Built-in security with Helmet, CORS, and rate limiting
-- 📁 Scalable and clean **folder structure**
+- ⚙️ Modular **Express.js** API structure
+- 🛡️ Security: Helmet, CORS, rate limiting
+- 📁 Scalable, clean **folder structure**
 - 🧹 Pre-configured with **ESLint** and **Prettier**
-- 🌐 Environment-based configuration with `dotenv`
-- 🐳 **Docker-ready** for containerized deployments
+- 🌐 Environment-based config using `dotenv`
 - 🪵 Centralized **error handling** and logging
+- 🖼️ File uploads via `multer` and `cloudinary`
 
 ---
 
@@ -21,16 +21,35 @@ A **production-ready Node.js backend boilerplate** built with **JavaScript** and
 - Node.js
 - Express.js
 - JavaScript (ES6+)
+- MongoDB (via Mongoose)
 - Dotenv
+- Multer + Cloudinary
 - ESLint + Prettier
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### 1. 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/sajukarim76/backend-boilerplate.git
 cd backend-boilerplate
+
 ```
+
+### 2. 📦 Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. ⚙️ Setup Environment Variables
+
+```bash
+cp .env.example .env
+```
+
+## 🖼️ File Uploads with Multer + Cloudinary
+
+This project uses multer to handle file uploads and cloudinary to store them in the cloud.
