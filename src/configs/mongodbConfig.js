@@ -1,6 +1,4 @@
-require('dotenv').config({ quiet: true })
 const mongoose = require('mongoose')
-const { DB_NAME } = require('../constants')
 
 const uri = process.env.MONGO_DB_URI
 
@@ -12,7 +10,7 @@ const configs = {
 const connect = async () => {
   try {
     // Connect to the MongoDB instance using the URI and DB name
-    const connectionInstance = await mongoose.connect(`${uri}/${DB_NAME}`)
+    const connectionInstance = await mongoose.connect(uri)
 
     // Apply additional configurations to Mongoose after connection
     for (const [key, value] of Object.entries(configs)) {

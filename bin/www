@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-require('dotenv').config({ quiet: true })
 const http = require('http')
 const debug = require('debug')('poolsea-backend:server')
 const app = require('../src/app')

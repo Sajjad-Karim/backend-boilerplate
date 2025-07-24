@@ -1,4 +1,3 @@
-require('dotenv').config({ quiet: true })
 const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
@@ -39,6 +38,7 @@ app.use(express.static('public'))
 app.use(cookieParser())
 
 // ROUTES should be defined here (before error handlers)
+app.use('/api/v1', require('./routes'))
 
 // 404 handler - catch undefined routes
 app.use((req, res, next) => {
